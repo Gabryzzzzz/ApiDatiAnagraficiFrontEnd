@@ -1,4 +1,4 @@
-<div class='spacinghoriz'>
+<div class='container'>
   <table class="table">
     <thead>
       <th>Nome</th>
@@ -12,8 +12,10 @@
       <th>{{ item.cognome }}</th>
       <th>{{ item.codiceFiscale }}</th>
       <th>{{ item.dataDiNascita | date: "d-M-yyyy" }}</th>
-      <button type="button" class="btn btn-primary">edit</button>
-      <button type="button" class="btn btn-danger">delete</button>
+      <th>
+        <button type="button" class="btn btn-primary">edit</button>
+        <button type="button" class="btn btn-danger">delete</button>
+      </th>
     </tr>
   </table>
 </div>

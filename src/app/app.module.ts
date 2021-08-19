@@ -14,7 +14,7 @@ import { TableDataComponent } from './table-data/table-data.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
