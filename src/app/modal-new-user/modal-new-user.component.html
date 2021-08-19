@@ -1,0 +1,57 @@
+<div class="modal-header">
+  <h4 class="modal-title">Hi there! {{data | json}}</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    data-dismiss="modal"
+    (click)="closeModal()"
+
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div>
+    <div>
+        <label>Nome<span>*</span></label>
+        <input type="text"
+        class="form-control"
+        name="nome"
+        access="false"
+        maxlength="36"
+        id="nome"
+        required="required"
+        aria-required="true"
+        [(ngModel)]="data.nome" name="nome">
+    </div>
+    <div>
+        <label>Cognome<span>*</span></label>
+        <input type="text"
+        class="form-control"
+        name="cognome"
+        access="false"
+        maxlength="36"
+        id="cognome" required="required" aria-required="true"
+        [(ngModel)]="data.cognome" name="cognome">
+    </div>
+    <div>
+        <label>Codice fiscale<span>*</span></label>
+        <input type="text" class="form-control" name="codice-fiscale" access="false" maxlength="36" id="codice-fiscale" required="required" aria-required="true"
+        [(ngModel)]="data.codiceFiscale" name="codiceFiscale">
+    </div>
+    <div>
+        <label>Data di nascita<span>*</span></label>
+        <input type="date" class="form-control" name="data-di-nascita" access="false" id="data-di-nascita" required="required" aria-required="true"
+        [(ngModel)]="data.dataDiNascita" name="dataDiNascita">
+    </div>
+</div>
+<button
+style="margin-top: 20px;"
+    type="button"
+    class="btn btn-primary"
+    (click)="adduser()"
+  >
+    Aggiungi
+  </button>
+</div>

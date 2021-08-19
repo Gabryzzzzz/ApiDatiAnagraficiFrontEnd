@@ -1,22 +1,27 @@
-<div class='container'>
-  <table class="table">
-    <thead>
-      <th>Nome</th>
-      <th>Cognome</th>
-      <th>Codice Fiscale</th>
-      <th>Data Di Nascita</th>
-      <th>Options</th>
+<div class="container">
+  <table class="table table-bordered" style="width: 100%;">
+    <thead scope="row" class='thead-dark'>
+      <th style="width: 20%;">Nome</th>
+      <th style="width: 20%;">Cognome</th>
+      <th style="width: 25%;">Codice Fiscale</th>
+      <th style="width: 15%;">Data Di Nascita</th>
+      <th style="width: 20%;">Options</th>
     </thead>
-    <tr *ngFor="let item of data?.dati">
+    <tr scope="row" *ngFor="let item of data?.dati">
       <th>{{ item.nome }}</th>
       <th>{{ item.cognome }}</th>
       <th>{{ item.codiceFiscale }}</th>
       <th>{{ item.dataDiNascita | date: "d-M-yyyy" }}</th>
       <th>
-        <button type="button" class="btn btn-primary">edit</button>
-        <button type="button" class="btn btn-danger">delete</button>
+        <div class="box">
+          <div>
+            <button type="button" class="btn btn-primary">Modifica</button>
+          </div>
+          <div>
+          <button type="button" class="btn btn-danger">Cancella</button>
+        </div>
+        </div>
       </th>
     </tr>
   </table>
 </div>
-

@@ -4,10 +4,10 @@ export interface ResponseData {
   errorMessage?: any;
 }
 
-interface Dati {
-  id: number;
-  nome: string;
-  cognome: string;
-  codiceFiscale: string;
-  dataDiNascita: string;
+export interface Dati {
+  id?: number;
+  nome?: string;
+  cognome?: string;
+  codiceFiscale?: string;
+  dataDiNascita?: Date;
 }
